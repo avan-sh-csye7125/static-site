@@ -6,7 +6,9 @@ pipeline {
   stages {
     stage('docker build') {
       steps {
-        ./run_in_docker.sh Dockerfile . static-site
+        sh 'pwd'
+        sh 'ls -la'
+        sh ./run_in_docker.sh Dockerfile . static-site
       }
     }
   }
