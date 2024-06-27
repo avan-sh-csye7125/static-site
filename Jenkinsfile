@@ -8,7 +8,6 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls -la'
-        sh ./run_in_docker.sh Dockerfile . static-site
       }
     }
   }
