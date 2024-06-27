@@ -5,3 +5,4 @@ node {
     customImage.inside {
         sh 'echo "Hello World"'
     }
+}
