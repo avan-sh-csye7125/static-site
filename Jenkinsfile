@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('docker build') {
       steps {
-        sh 'docker build -t static-site --no-push .'
+        ./run_in_docker.sh Dockerfile . static-site
       }
     }
   }
