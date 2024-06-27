@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    // docker { image 'node:16-alpine' }
-    docker { image 'gcr.io/kaniko-project/executor' }
+    docker { image 'node:16-alpine' }
+    // docker { image 'gcr.io/kaniko-project/executor' }
   }
   stages {
     stage('docker build') {
