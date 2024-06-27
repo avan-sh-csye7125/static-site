@@ -1,12 +1,12 @@
 pipeline {
   agent {
-    docker { image 'node:16-alpine' }
-    // docker { image 'gcr.io/kaniko-project/executor --no-push' }
+    // docker { image 'node:16-alpine' }
+    docker { image 'gcr.io/kaniko-project/executor' }
   }
   stages {
-    stage('Test') {
+    stage('docker build') {
       steps {
-        sh 'ls -l'
+        sh 'docker build -t static-site --no-push .'
       }
     }
   }
