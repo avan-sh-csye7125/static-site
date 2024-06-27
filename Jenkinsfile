@@ -1,14 +1,7 @@
-pipeline {
-  agent {
-    docker { image 'node:16-alpine' }
-    // docker { image 'gcr.io/kaniko-project/executor' }
-  }
-  stages {
-    stage('docker build') {
-      steps {
-        sh 'pwd'
-        sh 'ls -la'
-      }
+node {
+    checkout scm
+
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    customImage.inside {
+        sh 'echo "Hello World"'
     }
-  }
-}
