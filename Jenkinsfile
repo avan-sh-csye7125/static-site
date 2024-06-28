@@ -8,6 +8,8 @@ node {
             customImage.tag("avaneeshy/static-site:main")
             customImage.push()
         }
+
+    }
         
 }
 
