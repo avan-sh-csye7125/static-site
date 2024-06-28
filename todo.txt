@@ -1,0 +1,2 @@
+1. Enable Semver
+2. Switch to website folder using hugo
